@@ -1,2 +1,3 @@
-# cms_input_bool
-SamsonCMS true/false input
+# SamsonCMS true/false input
+
+Field type 11
