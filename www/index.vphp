@@ -1,0 +1,8 @@
+<div class="__inputfield <?php iv('cssClass') ?> <?php isnv('value', '__empty')?>" >
+    <input type="checkbox" class="__field_input_checkbox" <?php isval('value', '1', 'checked') ?> value="<?php iv('value')?>">
+    <input type="hidden" name="__action" value="<?php iv('action')?>">
+    <input type="hidden" name="__entity" value="<?php iv('entity')?>">
+    <input type="hidden" name="__param" value="<?php iv('param')?>">
+    <input type="hidden" name="__obj_id" value="<?php iv('objectId')?>">
+    <input type="hidden" name="__empty_text" value="<?php t('Введите значение')?>">
+</div>
