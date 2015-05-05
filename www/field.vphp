@@ -1,2 +1,0 @@
-<input type="text" class="__hidden" style="display:none" value="<?php iv('value')?>">
-<input type="checkbox" class="__input __field_input_checkbox" <?php isval('value', '1', 'checked') ?> id="<?php iv('fieldId')?>" style="display:none" value="<?php iv('value')?>">
