@@ -4,10 +4,11 @@
 
 /** JS SamsonCMS Select field interaction */
 SamsonCMS_InputBool = function(fields) {
-    var loader = new Loader(fields.parent(), {type: 'absolute', top: 1, left: 1});
+    var loader = new Loader(fields, {type: 'absolute', top: 1, left: 1});
 
     s('.__field_input_checkbox', fields).change(function(checkbox) {
         var new_value = checkbox.a('checked') ? 1 : 0;
+        checkbox.a('disabled', true);
 
         // Create form for async post
         var form = s('<form method="post" enctype="multipart/form-data"></form>');
@@ -27,6 +28,7 @@ SamsonCMS_InputBool = function(fields) {
 
         // Perform ajax save
         form.ajaxForm(function() {
+            checkbox.a('disabled', false);
             loader.hide();
         });
     });
