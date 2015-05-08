@@ -8,7 +8,7 @@ SamsonCMS_InputBool = function(fields) {
 
     s('.__field_input_checkbox', fields).change(function(checkbox) {
         var new_value = checkbox.a('checked') ? 1 : 0;
-        checkbox.a('disabled', true);
+        checkbox.hide();
 
         // Create form for async post
         var form = s('<form method="post" enctype="multipart/form-data"></form>');
@@ -28,7 +28,7 @@ SamsonCMS_InputBool = function(fields) {
 
         // Perform ajax save
         form.ajaxForm(function() {
-            checkbox.a('disabled', false);
+            checkbox.show();
             loader.hide();
         });
     });
