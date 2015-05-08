@@ -6,4 +6,4 @@ This module extends [SamsonCMS Input Module](https://github.com/samsonos/cms_inp
 
 Bool input has type 11 and saves values in field `Value` of `materialfield` table.
 
-Created by [SamsonOS](samsoncms.com)
+Created by [SamsonOS](samsoncms.com).
