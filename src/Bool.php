@@ -27,7 +27,8 @@ class Bool extends Field
         return $renderer->view($this->defaultView)
             ->set('cssClass', $this->cssClass)
             ->set('value', $this->value())
-            ->set('action', url_build($renderer->id(), $saveHandler))
+            //TODO fixed it later
+            ->set('action', url_build(preg_replace('/(_\d+)/', '', $renderer->id()), $saveHandler))
             ->set('entity', $this->entity)
             ->set('param', $this->param)
             ->set('objectId', $this->dbObject->id)
