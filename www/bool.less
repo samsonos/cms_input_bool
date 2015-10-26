@@ -1,8 +1,68 @@
-.__inputfield {
-  .__field_input_checkbox {
-    width: 23px;
-    height: 23px;
-    display: block;
-    margin: 0 auto;
-  }
+//.__inputfield {
+//  .__field_input_checkbox {
+//    width: 23px;
+//    height: 23px;
+//    display: block;
+//    margin: 0 auto;
+//  }
+//}
+
+.onoffswitch {
+  position: relative;
+  width: 40px;
+  margin: 0 auto;
+}
+.__field_input_checkbox {
+  display: none!important;
+}
+.onoffswitch-label {
+  display: block;
+  overflow: hidden;
+  cursor: pointer;
+  border-radius: 0;
+  position: relative;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 26px;
+  font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+.onoffswitch-inner:before {
+  content: "";
+  padding-left: 10px;
+  background-color: #A1A1A1;
+  color: #FFFFFF;
+  box-shadow: 0 0 0 1px #999999;
+
+}
+.onoffswitch-inner:after {
+  content: "";
+  padding-right: 10px;
+  background-color: #CCCCCC;
+  color: #333333;
+  text-align: right;
+  box-shadow: 0 0 0 1px #999999;
+}
+.onoffswitch-switch {
+  display: block;
+  width: 15px;
+  margin: 0;
+  background: #0FC218;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 25px;
+  transition: all 0.3s ease-in 0s;
+}
+.__field_input_checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.__field_input_checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0;
 }
