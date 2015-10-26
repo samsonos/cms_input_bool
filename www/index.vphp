@@ -1,5 +1,9 @@
-<div class="__inputfield <?php iv('cssClass') ?> <?php isnv('value', '__empty')?>" >
-    <input type="checkbox" class="__field_input_checkbox" <?php isval('value', '1', 'checked') ?> value="<?php iv('value')?>">
+<div class="__inputfield <?php iv('cssClass') ?> <?php isnv('value', '__empty')?> onoffswitch" >
+    <input type="checkbox" id="switch_<?php iv('objectId')?>" class="__field_input_checkbox onoffswitch-checkbox" <?php isval('value', '1', 'checked') ?> value="<?php iv('value')?>">
+    <label class="onoffswitch-label" for="switch_<?php iv('objectId')?>">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
     <input type="hidden" name="__action" value="<?php iv('action')?>">
     <input type="hidden" name="__entity" value="<?php iv('entity')?>">
     <input type="hidden" name="__param" value="<?php iv('param')?>">
