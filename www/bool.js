@@ -30,6 +30,11 @@ SamsonCMS_InputBool = function(fields) {
         form.ajaxForm(function() {
             checkbox.show();
             loader.hide();
+
+            // Toggle publish class in entity if this is publish switcher
+            if (checkbox.parent().parent().hasClass('publish')) {
+                checkbox.parent().parent().parent().toggleClass('not-published');
+            }
         });
     });
 };
