@@ -2,12 +2,11 @@
 namespace samsoncms\input\bool;
 
 use samsoncms\input\Field;
-use samsonphp\event\Event;
 
 /**
  * Bool SamsonCMS input field
  */
-class Bool extends Field
+class InputBool extends Field
 {
     /** Database object field name */
     protected $param = 'Value';
