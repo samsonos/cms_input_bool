@@ -1,5 +1,4 @@
 <?php
-
 namespace samsoncms\input\bool;
 
 /**
@@ -11,5 +10,5 @@ class Application extends \samsoncms\input\Application
     public static $type = 11;
 
     /** @var string SamsonCMS field class */
-    protected $fieldClass = '\samsoncms\input\bool\Bool';
+    protected $fieldClass = InputBool::class;
 }
